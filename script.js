@@ -30,13 +30,13 @@ function checkWinner(playerSelection, computerSelection) {
 function playRound(playerSelection, computerSelection) {
     const result = checkWinner(playerSelection, computerSelection);
     if (result == "Tie") {
-        return "It's a tie!"
+        console.log( "It's a tie!")
     }
     else if (result == "Player"){
-        return `You win! ${playerSelection} beats ${computerSelection}`
+        console.log( `You win! ${playerSelection} beats ${computerSelection}`)
     }
     else {
-        return `You lose! ${computerSelection} beats ${playerSelection}`
+        console.log( `You lose! ${computerSelection} beats ${playerSelection}`)
     }
     
 
@@ -83,4 +83,32 @@ function game(){
 
 }
 
-game()
+
+let computerSelection = getComputerChoice();
+
+const rockButton = document.querySelector("#rock");
+
+rockButton.addEventListener("click", () => {
+  let playerSelection = "rock";
+  let computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+  
+});
+
+const paperButton = document.querySelector("#paper");
+
+paperButton.addEventListener("click", () => {
+  let playerSelection = "paper";
+  let computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+  
+});
+
+const scissorsButton = document.querySelector("#scissors");
+
+scissorsButton.addEventListener("click", () => {
+  let playerSelection = "scissors";
+  let computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+  
+});
