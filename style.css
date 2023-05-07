@@ -8,7 +8,13 @@
     font-weight: 900;
 
 }
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
 body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #41b3a3;
 }
 .rules {
@@ -42,24 +48,9 @@ body {
     background-color: #41b3a3
 }
 
-#player {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #41b3a3;
-    font-size: larger;
-    font-weight: 900;
-
-}
-
-#computer {
+.labels{
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: larger;
-    font-weight: 900;
-    background-color: #41b3a3
-
 }
 
 .footer {
@@ -70,4 +61,52 @@ body {
     font-size: larger;
     font-weight: 900;
 
+
+}
+
+.scoreTracker {
+    display: flex;
+    justify-content: center;
+}
+
+#playerLabel {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5f0b3d;
+    padding-left: 15px;
+}
+#player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: 5px solid rgb(27, 27, 31);
+    margin-top: 3px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+#computer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: 5px solid rgb(27, 27, 31);
+    margin-top: 3px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#computerLabel {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5f0b3d;
+    padding-left: 15px;
 }

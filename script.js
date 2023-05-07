@@ -1,4 +1,5 @@
 const container = document.querySelector("#gameDiv");
+const playerButtons = document.querySelectorAll("image")
 
 let scorePlayer = 0;
 let scoreComputer = 0;
@@ -79,22 +80,20 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (result == "Player"){
         scorePlayer++;
-        playerText.textContent = "Player wins! Player score is " + scorePlayer;
+        playerText.textContent = scorePlayer;
         playerDiv.appendChild(playerText);
-         result2.textContent = " Player wins! Player score is " + scorePlayer;
-         gameDiv.appendChild(result2);
-         result2.textContent = " Player wins! Player score is " + scorePlayer;
+         result2.textContent = "Player wins!";
          gameDiv.appendChild(result2);
     }
     else {
         scoreComputer++;
-         result2.textContent = " Player loses! Computer score is " + scoreComputer;
+         result2.textContent = "Computer wins!";
          gameDiv.appendChild(result2);
-         computerText.textContent = " Player loses! Computer score is " + scoreComputer;
+         computerText.textContent = scoreComputer;
         computerDiv.appendChild(computerText);
-    }
-    
 
+
+    }
 }
 
 function getPlayerChoice() {
@@ -110,33 +109,4 @@ function getPlayerChoice() {
             return choiceLowercase;
         }
     }
-}
-
-function game(){
-    let scorePlayer = 0;
-    let scoreComputer = 0;
-    while (scorePlayer < 5 && scoreComputer < 5) {
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        if(checkWinner(playerSelection, computerSelection) == "Player") {
-            scorePlayer++;
-            console.log(scorePlayer); 
-        }
-        else if ((checkWinner(playerSelection, computerSelection) == "Computer")) {
-            scoreComputer++;
-            console.log(scoreComputer);
-        }
-    }
-    console.log("Game Over")
-    if (scorePlayer > scoreComputer) {
-        console.log("Player wins!");
-    }
-    else if (scorePlayer < scoreComputer){
-        console.log("Computer wins!");
-    }
-    else {
-        console.log("Tie!");
-    }
-
 }
